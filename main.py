@@ -6,24 +6,28 @@
 import random
 
 money = []
+
 n = int(input("Enter n = "))
-orel = 0
-reshka = 0
-spisok = ["orel","reshka"]
-
-for i in range(n):
-    money.append(random.choice(spisok))
-
-    if money[i] == "reshka":
-        reshka += 1
-    else:
-        orel += 1
-    
-    print(money[i])
-
-print(f"Reshka quantity = {reshka}, Orel quantity = {orel}")
-
-if orel >= reshka:
-    print(f"Need to turn over {reshka} coins")
+if n <= 0:
+    print("Incorrect input")
 else:
-    print(f"Need to turn over {orel} coins")
+    orel = 0
+    reshka = 0
+    spisok = ["orel","reshka"]
+
+    for i in range(n):
+        money.append(random.choice(spisok))
+
+        if money[i] == "reshka":
+            reshka += 1
+        else:
+            orel += 1
+    
+        print(money[i])
+
+    print(f"Reshka quantity = {reshka}, Orel quantity = {orel}")
+
+    if orel >= reshka:
+        print(f"Need to turn over {reshka} coins")
+    else:
+        print(f"Need to turn over {orel} coins")
