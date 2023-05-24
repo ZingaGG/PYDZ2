@@ -38,22 +38,37 @@
 # Он задумывает два натуральных числа X и Y (X,Y≤1000), а Катя должна их отгадать. 
 # Для этого Петя делает две подсказки. Он называет сумму этих чисел S и их произведение P. Помогите Кате отгадать задуманные Петей числа.
 
-import math
+# import math
 
-x = int(input("x = "))
-y = int(input("y = "))
+# x = int(input("x = "))
+# y = int(input("y = "))
 
-s = x + y
-p = x * y
+# s = x + y
+# p = x * y
 
-x = 0 # Обнуляем для честности :D
-y = 0 # Обнуляем для честности :D
+# x = 0 # Обнуляем для честности :D
+# y = 0 # Обнуляем для честности :D
 
-if (x > 1000) or (y > 1000):
-    print("Incorrect input!")
+# if (x > 1000) or (y > 1000):
+#     print("Incorrect input!")
+# else:
+#     d = (s * s) - (4 * p)
+#     d = math.sqrt(d)
+#     y = (s + d) / 2
+#     x = (s - d) / 2
+#     print(f"Загаданные числа = {x}, {y}")
+
+# Task 3
+
+# Требуется вывести все целые степени двойки (т.е. числа вида 2k), не превосходящие числа N.
+
+N = int(input("Enter N >= 1 "))
+dvoika = 1
+
+if N < 1:
+    print("Incorrect input")
 else:
-    d = (s * s) - (4 * p)
-    d = math.sqrt(d)
-    y = (s + d) / 2
-    x = (s - d) / 2
-    print(f"Загаданные числа = {x}, {y}")
+    while dvoika <= N:
+        print(dvoika)
+        dvoika *= 2
+        
